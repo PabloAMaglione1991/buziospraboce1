@@ -1,0 +1,30 @@
+:root {
+  --primary-color: #0055A4;
+  --secondary-color: #FFC107;
+  --font-heading: 'Montserrat', sans-serif;
+  --font-body: 'Open Sans', sans-serif;
+  --overlay-bg: rgba(0, 0, 0, 0.5);
+  --transition-fast: .2s ease;
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1200px;
+}
+
+/* Reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 100%; /* 16px */
+}
+
+body {
+  font-family: var(--font-body), sans-serif;
+  color: #333;
+  line-height: 1.6;
+  background-color: #fff;
+}

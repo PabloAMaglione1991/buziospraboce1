@@ -1,2 +1,20 @@
-# Auto detect text files and perform LF normalization
+# Normalize text files
 * text=auto
+
+# End-of-line handling for key file types
+*.html text eol=lf
+*.css  text eol=lf
+*.js   text eol=lf
+*.json text eol=lf
+
+# Treat common image and font files as binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.webp binary
+*.svg binary
+*.woff2 binary
+
+# Exclude source design files from archives
+*.psd export-ignore
+*.ai  export-ignore

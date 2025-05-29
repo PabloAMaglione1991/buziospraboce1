@@ -1,0 +1,25 @@
+/* Utility Classes */
+.text-center { text-align: center !important; }
+.py-5 { padding-top: 3rem !important; padding-bottom: 3rem !important; }
+.mb-3 { margin-bottom: 1rem !important; }
+
+/* Accessibility: focus-visible */
+:focus-visible {
+  outline: 3px solid var(--secondary-color);
+  outline-offset: 2px;
+}
+
+/* Image helpers */
+img {
+  max-width: 100%; height: auto; display: block;
+}
+
+/* Responsive utilities */
+@media (min-width: var(--breakpoint-sm)) {
+  .sm\:text-start { text-align: left !important; }
+}
+@media (min-width: var(--breakpoint-md)) {
+  .md\:d-flex { display: flex !important; }
+}
+
+/* Note: For production, run PurgeCSS to remove unused classes and use Autoprefixer for vendor prefixes */
