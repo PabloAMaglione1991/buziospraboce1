@@ -1,5 +1,5 @@
 // assets/js/menu.js
-// Módulo para manejo del menú de navegación: colapsa al hacer clic en un enlace
+// Módulo para manejar el colapso del menú al hacer clic en un enlace
 
 export function initMenu() {
   const navLinks = document.querySelectorAll('.nav-link');
@@ -9,7 +9,6 @@ export function initMenu() {
   navLinks.forEach(link => {
     link.addEventListener('click', () => {
       if (navbarCollapse.classList.contains('show')) {
-        // Usamos la API de Bootstrap para ocultar
         const bsCollapse = new bootstrap.Collapse(navbarCollapse, { toggle: false });
         bsCollapse.hide();
       }
