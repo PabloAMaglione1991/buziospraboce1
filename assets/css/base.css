@@ -1,17 +1,17 @@
 :root {
-  --primary-color: #0055A4;
-  --secondary-color: #FFC107;
+  --primary-color: #006d77;
+  --secondary-color: #83c5be;
+  --accent-gradient: linear-gradient(45deg, #006d77, #83c5be);
   --font-heading: 'Montserrat', sans-serif;
   --font-body: 'Open Sans', sans-serif;
   --overlay-bg: rgba(0, 0, 0, 0.5);
-  --transition-fast: .2s ease;
-  --breakpoint-sm: 576px;
+  --transition-fast: 0.3s ease-in-out;
+  --radius: 0.75rem;
+  --spacing: 1rem;
   --breakpoint-md: 768px;
-  --breakpoint-lg: 992px;
-  --breakpoint-xl: 1200px;
 }
 
-/* Reset */
+/* Global reset */
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -19,12 +19,21 @@
 }
 
 html {
-  font-size: 100%; /* 16px */
+  scroll-behavior: smooth;
+  font-size: 16px;
 }
 
 body {
   font-family: var(--font-body), sans-serif;
-  color: #333;
+  color: #444;
+  background-color: #f9f9f9;
   line-height: 1.6;
-  background-color: #fff;
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #1c1c1e;
+    color: #ddd;
+  }
 }

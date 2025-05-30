@@ -34,3 +34,13 @@ export function initScrollAnimations() {
     });
   }, 200));
 }
+
+// Al cargar DOM
+document.addEventListener('DOMContentLoaded', () => {
+  const nav = document.getElementById('mainNav');
+  const toggleScrolled = () => {
+    nav.classList.toggle('scrolled', window.scrollY > 50);
+  };
+  window.addEventListener('scroll', toggleScrolled);
+  toggleScrolled(); // para inicio de página en scroll
+});

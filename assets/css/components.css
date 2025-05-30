@@ -1,79 +1,121 @@
 /* Navbar */
+/* Navbar base */
 .navbar {
-  background-color: var(--primary-color);
+  background: transparent;
+  transition: background var(--transition-fast), padding var(--transition-fast);
+  padding: var(--spacing) 2rem;
 }
-.navbar-brand,
-.nav-link {
+.navbar .navbar-brand {
+  font-family: var(--font-heading);
+  font-size: 1.75rem;
+  background: var(--accent-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+/* Ícono blanco en mobile */
+.navbar .navbar-toggler-icon {
+  filter: invert(1);
+}
+/* Links iniciales blancos */
+.navbar .nav-link {
   color: #fff;
+  margin-left: var(--spacing);
   transition: color var(--transition-fast);
 }
-.nav-link:hover,
-.nav-link:focus {
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
   color: var(--secondary-color);
 }
+
+/* Estado scrolled */
+.navbar.scrolled {
+  background: rgba(255,255,255,0.95);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  padding: 0.5rem 2rem;
+}
+/* Al hacer scroll, toggler oscuro */
+.navbar.scrolled .navbar-toggler-icon {
+  filter: none;
+}
+/* Links en estado scrolled */
+.navbar.scrolled .nav-link {
+  color: #333;
+}
+.navbar.scrolled .nav-link:hover,
+.navbar.scrolled .nav-link.active {
+  color: var(--primary-color);
+}
+
 
 /* Hero */
 .hero-section {
   position: relative;
-  overflow: hidden;
-  text-align: center;
-}
-.hero-section picture,
-.hero-section img {
-  width: 100%;
-  display: block;
-}
-.hero-section .overlay {
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background-color: var(--overlay-bg);
+  height: 100vh;
+  background: url('assets/img/hero/hero-atardecer.webp') center/cover fixed;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.hero-section h1 {
-  font-family: var(--font-heading), sans-serif;
-  font-size: 1.5rem;
-  color: #fff;
+.hero-section .overlay {
+  position: absolute;
+  inset: 0;
+  background: var(--overlay-bg);
 }
-@media (min-width: var(--breakpoint-md)) {
-  .hero-section h1 {
-    font-size: 2.5rem;
-  }
+.hero-section h1 {
+  position: relative;
+  color: #fff;
+  font-family: var(--font-heading);
+  font-size: 3rem;
+  text-align: center;
+  animation: fadeUp 1.2s ease-out both;
+}
+
+/* Section headings */
+h2 {
+  font-family: var(--font-heading);
+  font-size: 2.25rem;
+  background: var(--accent-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: var(--spacing);
 }
 
 /* Cards */
 .card {
-  border: none; border-radius: .5rem; overflow: hidden;
+  border: none;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
   transition: transform var(--transition-fast), box-shadow var(--transition-fast);
 }
-.card:hover, .card:focus-within {
-  transform: translateY(-5px);
-  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.2);
 }
 .card-img-top {
-  width: 100%; display: block;
+  transition: transform var(--transition-fast);
+}
+.card:hover .card-img-top {
+  transform: scale(1.05);
 }
 
-/* Forms */
-form .form-label {
-  font-weight: bold; margin-bottom: .5rem;
-}
-form .form-control {
-  width: 100%; padding: .5rem; margin-bottom: 1rem;
-  border: 1px solid #ccc; border-radius: .25rem;
-}
-form .btn {
-  background-color: var(--primary-color);
+/* Buttons */
+.btn-primary {
+  background: var(--accent-gradient);
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius);
+  transition: opacity var(--transition-fast);
   color: #fff;
-  transition: background-color var(--transition-fast);
 }
-form .btn:hover, form .btn:focus {
-  background-color: var(--secondary-color);
+.btn-primary:hover {
+  opacity: 0.85;
 }
 
 /* Footer */
 footer {
-  background-color: #f8f9fa; color: #666; font-size: .9rem; padding: 1rem 0;
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: var(--spacing);
 }

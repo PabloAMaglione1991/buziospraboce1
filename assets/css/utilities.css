@@ -1,25 +1,30 @@
+/* Animations */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 /* Utility Classes */
 .text-center { text-align: center !important; }
 .py-5 { padding-top: 3rem !important; padding-bottom: 3rem !important; }
 .mb-3 { margin-bottom: 1rem !important; }
 
-/* Accessibility: focus-visible */
-:focus-visible {
-  outline: 3px solid var(--secondary-color);
-  outline-offset: 2px;
-}
-
-/* Image helpers */
-img {
-  max-width: 100%; height: auto; display: block;
-}
-
-/* Responsive utilities */
-@media (min-width: var(--breakpoint-sm)) {
-  .sm\:text-start { text-align: left !important; }
-}
+/* Responsive grid utility */
 @media (min-width: var(--breakpoint-md)) {
-  .md\:d-flex { display: flex !important; }
+  .md\:grid-cols-3 {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing);
+  }
 }
-
-/* Note: For production, run PurgeCSS to remove unused classes and use Autoprefixer for vendor prefixes */

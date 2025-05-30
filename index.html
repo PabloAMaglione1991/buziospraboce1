@@ -30,37 +30,36 @@
   <link rel="preload" href="assets/fonts/Montserrat.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/img/hero/hero-atardecer.webp" as="image">
 
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BTVy5+3ChRfU5fsahgP32XxzQ/Fzp8Mc8fty2jWOKF9yR8qZN6B/Mak3C9Y82S3Z" crossorigin="anonymous">
+
   <!-- Modular CSS -->
-  <link rel="stylesheet" href="/buziospraboce/assets/css/base.css">
-  <link rel="stylesheet" href="/buziospraboce/assets/css/components.css">
-  <link rel="stylesheet" href="/buziospraboce/assets/css/utilities.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/utilities.css">
 </head>
 <body>
   <header>
-    <nav class="navbar navbar-expand-lg" aria-label="Menú principal">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">Búzios Pra Você</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-          data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
-          aria-label="Abrir menú de navegación">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
-            <li class="nav-item"><a class="nav-link" href="#tours">Tours</a></li>
-            <li class="nav-item"><a class="nav-link" href="#galeria">Galería</a></li>
-            <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
-            <li class="nav-item">
-              <a class="nav-link" href="#" aria-label="Contacto por WhatsApp">
-                <img src="assets/img/icons/whatsapp.svg" alt="" width="24" height="24">
-              </a>
-            </li>
-          </ul>
-        </div>
+  <nav class="navbar navbar-expand-lg fixed-top navbar-light px-4" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand" href="#">Búzios Pra Você</a>
+      <button class="navbar-toggler navbar-dark" type="button" data-bs-toggle="collapse"
+              data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+              aria-label="Abrir menú de navegación">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link active" href="#inicio">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="#tours">Tours</a></li>
+          <li class="nav-item"><a class="nav-link" href="#galeria">Galería</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+        </ul>
       </div>
-    </nav>
-  </header>
+    </div>
+  </nav>
+</header>
 
   <main>
     <!-- Hero Section -->
@@ -68,9 +67,9 @@
       <picture>
         <source srcset="assets/img/hero/hero-atardecer.webp" type="image/webp">
         <img src="assets/img/hero/hero-atardecer.jpg"
-             alt="Vista panorámica de la playa de Búzios al atardecer"
-             loading="lazy"
-             width="1920" height="1080">
+              alt="Vista panorámica de la playa de Búzios al atardecer"
+              loading="lazy"
+              width="1920" height="1080">
       </picture>
       <div class="overlay">
         <h1>Explora Búzios con nosotros</h1>
